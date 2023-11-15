@@ -1,0 +1,226 @@
+[
+  {
+    "name": "Organic Grain-Free Dog Food",
+    "category": "food",
+    "price": 39.99,
+    "stock": 150,
+    "image": "https://example.com/dogfood.jpg",
+    "description": "Premium organic grain-free dog food made with natural ingredients for optimal health and digestion."
+  },
+  {
+    "name": "Interactive Squeaky Dog Toy",
+    "category": "toys",
+    "price": 12.50,
+    "stock": 200,
+    "image": "https://example.com/squeakytoy.jpg",
+    "description": "Durable and interactive squeaky toy for dogs, designed to provide hours of entertainment and mental stimulation."
+  },
+  {
+    "name": "Aquarium Heater",
+    "category": "accessories",
+    "price": 24.99,
+    "stock": 90,
+    "image": "https://example.com/aquarium-heater.jpg",
+    "description": "Precise temperature-adjustable aquarium heater to maintain optimal water conditions."
+  },
+  {
+    "name": "Pet Grooming Kit with Brushes and Clippers",
+    "category": "grooming",
+    "price": 45.99,
+    "stock": 100,
+    "image": "https://example.com/groomingkit.jpg",
+    "description": "Complete pet grooming kit with brushes and clippers for professional grooming sessions at home."
+  },
+  {
+    "name": "Natural Catnip Toy Ball",
+    "category": "toys",
+    "price": 8.99,
+    "stock": 120,
+    "image": "https://example.com/catniptoy.jpg",
+    "description": "All-natural catnip toy ball that encourages exercise and mental stimulation for cats."
+  },
+  {
+    "name": "Grain-Free Salmon Cat Food",
+    "category": "food",
+    "price": 29.50,
+    "stock": 180,
+    "image": "https://example.com/salmoncatfood.jpg",
+    "description": "Nutritious grain-free salmon cat food providing essential nutrients and Omega-3 fatty acids."
+  },
+  {
+    "name": "Dog Rope Chew Toy Set",
+    "category": "toys",
+    "price": 15.75,
+    "stock": 150,
+    "image": "https://example.com/ropechewtoys.jpg",
+    "description": "Set of durable rope chew toys for dogs, aiding dental health and teething relief."
+  },
+  {
+    "name": "Pet Hair Remover Roller",
+    "category": "grooming",
+    "price": 12.99,
+    "stock": 200,
+    "image": "https://example.com/hairremover.jpg",
+    "description": "Efficient pet hair remover roller for furniture and clothing, easy to use and clean."
+  },
+  {
+    "name": "Treat Dispensing Dog Puzzle Toy",
+    "category": "toys",
+    "price": 17.25,
+    "stock": 130,
+    "image": "https://example.com/puzzledogtoy.jpg",
+    "description": "Interactive treat-dispensing puzzle toy for mental stimulation and entertainment for dogs."
+  },
+  {
+    "name": "Natural Cat Litter",
+    "category": "accessories",
+    "price": 19.99,
+    "stock": 170,
+    "image": "https://example.com/cat-litter.jpg",
+    "description": "Biodegradable and odor-absorbing natural cat litter made from sustainable materials."
+  },
+  {
+    "name": "Colorful Bird Perch Swing",
+    "category": "toys",
+    "price": 9.49,
+    "stock": 100,
+    "image": "https://example.com/bird-perch.jpg",
+    "description": "Vibrant and durable perch swing for birds, providing exercise and entertainment."
+  },
+  {
+    "name": "Hamster Exercise Wheel",
+    "category": "toys",
+    "price": 7.99,
+    "stock": 120,
+    "image": "https://example.com/hamster-wheel.jpg",
+    "description": "Quiet and safe exercise wheel designed for hamsters to keep them active and healthy."
+  },
+  {
+    "name": "Nutritious Bird Seed Mix",
+    "category": "food",
+    "price": 12.75,
+    "stock": 150,
+    "image": "https://example.com/bird-seed.jpg",
+    "description": "Healthy and balanced bird seed mix containing a variety of seeds and grains."
+  },
+  {
+    "name": "Hamster Hideout House",
+    "category": "accessories",
+    "price": 11.99,
+    "stock": 100,
+    "image": "https://example.com/hamster-house.jpg",
+    "description": "Cozy hideout house for hamsters providing a safe and comfortable resting place."
+  },
+  {
+    "name": "Bird Cage Perch Set",
+    "category": "accessories",
+    "price": 18.50,
+    "stock": 90,
+    "image": "https://example.com/bird-cage-perch.jpg",
+    "description": "Set of assorted perches for bird cages, offering variety and stimulation for birds."
+  },
+  {
+    "name": "Hamster Chew Toys Bundle",
+    "category": "toys",
+    "price": 14.25,
+    "stock": 110,
+    "image": "https://example.com/hamster-chew-toys.jpg",
+    "description": "Bundle of chew toys designed to promote dental health, and prevent boredom in hamsters."
+  },
+  {
+    "name": "Bird Bath House",
+    "category": "accessories",
+    "price": 22.99,
+    "stock": 80,
+    "image": "https://example.com/bird-bath-house.jpg",
+    "description": "Functional and decorative bird bath house for birds to bathe and keep feathers clean."
+  },
+  {
+    "name": "Hamster Exercise Ball",
+    "category": "toys",
+    "price": 10.99,
+    "stock": 100,
+    "image": "https://example.com/hamster-exercise-ball.jpg",
+    "description": "Transparent exercise ball for hamsters, providing safe and fun roaming around the house."
+  },
+  {
+    "name": "Colorful Bird Cage Accessories Set",
+    "category": "accessories",
+    "price": 15.25,
+    "stock": 90,
+    "image": "https://example.com/bird-cage-accessories.jpg",
+    "description": "Set of vibrant bird cage accessories including perches, swings, and feeding bowls."
+  },
+  {
+    "name": "Hamster Bedding Material",
+    "category": "accessories",
+    "price": 8.49,
+    "stock": 120,
+    "image": "https://example.com/hamster-bedding.jpg",
+    "description": "Soft and absorbent bedding material for hamsters, providing comfort and hygiene."
+  },
+  {
+    "name": "Treat Sticks for Birds",
+    "category": "food",
+    "price": 11.50,
+    "stock": 85,
+    "image": "https://example.com/bird-treat-sticks.jpg",
+    "description": "Nutritious treat sticks enriched with vitamins and minerals for bird's well-being."
+  },
+  {
+    "name": "Hamster Exercise Ladder",
+    "category": "toys",
+    "price": 9.75,
+    "stock": 110,
+    "image": "https://example.com/hamster-ladder.jpg",
+    "description": "Climbing ladder toy designed to stimulate exploration and exercise for hamsters."
+  },
+  {
+    "name": "Colorful Aquarium Gravel",
+    "category": "accessories",
+    "price": 7.99,
+    "stock": 150,
+    "image": "https://example.com/aquarium-gravel.jpg",
+    "description": "Vibrant and non-toxic aquarium gravel, enhancing the visual appeal of fish tanks."
+  },
+  {
+    "name": "Tropical Fish Flake Food",
+    "category": "food",
+    "price": 14.50,
+    "stock": 120,
+    "image": "https://example.com/fish-flake-food.jpg",
+    "description": "Nutritious flake food for tropical fish, providing essential nutrients for optimal health."
+  },
+  {
+    "name": "Aquarium Air Pump",
+    "category": "accessories",
+    "price": 19.99,
+    "stock": 100,
+    "image": "https://example.com/aquarium-air-pump.jpg",
+    "description": "Quiet and energy-efficient aquarium air pump for oxygenating fish tanks."
+  },
+  {
+    "name": "Algae Scrubber Magnet Cleaner",
+    "category": "accessories",
+    "price": 12.75,
+    "stock": 110,
+    "image": "https://example.com/algae-scrubber.jpg",
+    "description": "Dual-sided magnet cleaner for effectively removing algae from aquarium glass."
+  },
+  {
+    "name": "Freeze-Dried Bloodworms",
+    "category": "food",
+    "price": 9.99,
+    "stock": 130,
+    "image": "https://example.com/bloodworms.jpg",
+    "description": "High-protein freeze-dried bloodworms, a nutritious treat for freshwater fish."
+  },
+  {
+    "name": "Aquarium Heater",
+    "category": "accessories",
+    "price": 24.99,
+    "stock": 90,
+    "image": "https://example.com/aquarium-heater.jpg",
+    "description": "Precise temperature-adjustable aquarium heater to maintain optimal water conditions."
+  }
+]
