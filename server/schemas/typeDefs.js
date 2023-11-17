@@ -32,7 +32,6 @@ const typeDefs = `
         me: User
         products: [Product]
         product(productId: ID!): Product
-        cart: Cart
     }
 
     type Mutation{
