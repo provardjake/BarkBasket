@@ -23,7 +23,7 @@ export const LOGIN_USER = gql`
   }`;
 
 export const ADD_TO_CART = gql`
-  mutation Mutation($productId: ID!) {
+  mutation addToCart($productId: ID!) {
     addToCart(productId: $productId) {
       cart {
         name
@@ -34,12 +34,23 @@ export const ADD_TO_CART = gql`
   }`;
 
   export const REMOVE_FROM_CART = gql`
-    mutation Mutation($productId: ID!) {
+    mutation removeFromCart($productId: ID!) {
     removeFromCart(productId: $productId) {
       cart {
         name
         productId
         price
+      }
+    }
+  }`;
+
+  export const CHECKOUT = gql`
+    mutation checkout($userId: ID!) {
+    checkout(userId: $userId) {
+      cart {
+        name
+        price
+        productId
       }
     }
   }`;
