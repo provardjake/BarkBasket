@@ -4,6 +4,7 @@
     "main": "server.js",
     "scripts": {
       "start": "node server.js",
+      "watch": "nodemon",
       "seed": "node seeders/seeders/seed.js"
     },
     "dependencies": {
