@@ -41,6 +41,42 @@ const resolvers = {
 
             return {token, user};
         },
-        
+        addToCart: async (parent, {productId, userId}, context) =>{
+            if(context.user){
+                const product = Product.findOne({_id: productId});
+                return User.findOneAndUpdate(
+                    {_id: userId},
+                    {$push: {
+                        cart: {
+                            productId: product._id,
+                            name: product.name,
+                            price: product.price
+                        }
+                    }},
+                    {
+                        new: true,
+                        runValidators: true
+                    }
+                );
+            }
+            throw AuthenticationError;
+        },
+        removeFromCart: async (parent, {productId, userId}, context) =>{
+            if(context.user){
+                const product = Product.findOne({_id: productId});
+                return User.findOneAndUpdate(
+                    {_id: userId},
+                    {$pull: {
+                        cart: {
+                            productId: product._id,
+                            name: product.name,
+                            price: product.price
+                        }
+                    }}
+                )
+            }
+        }
     }
-}
+};
+
+module.exports = resolvers;

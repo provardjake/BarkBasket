@@ -1,8 +1,6 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-const cartSchema = require("./Cart");
-
 const userSchema = new Schema(
     {
         username: {
@@ -20,7 +18,19 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-        cart: [cartSchema],
+        cart: [
+            {
+                productId: {
+                    type: Schema.Types.ObjectId,
+                },
+                name: {
+                    type: String,
+                },
+                price: {
+                    type: Number,
+                }
+            }
+        ],
     },
     {
         toJSON: {
@@ -44,6 +54,14 @@ userSchema.methods.isCorrectPassword = async function (password) {
 
 userSchema.virtual("cartCount").get(function (){
     return this.cart.length;
+})
+
+userSchema.virtual("cartTotal").get(function (){
+    let total = 0;
+    for (let i = 0; i < this.cart.length; i++){
+        total = total + this.cart[i].price;
+    }
+    return total;
 })
 
 const User = model("User", userSchema);
