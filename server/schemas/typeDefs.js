@@ -18,9 +18,9 @@ const typeDefs = `
     }
 
     type Cart{
-        userId: ID
-        products: [Product]!
-        total: Int
+        productId: ID
+        name: String
+        price: Int
     }
 
     type Auth{
@@ -37,7 +37,8 @@ const typeDefs = `
     type Mutation{
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String): Auth
-        
+        addToCart(productId: ID!, userId: ID!): User
+        removeFromCart(productId: ID!, userId: ID!) :User
     }
 `;
 
