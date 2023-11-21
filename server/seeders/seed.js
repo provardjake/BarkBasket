@@ -1,28 +1,27 @@
 const db = require('../config/connection');
-const { } = require('../models');
+const {User, Product } = require('../models');
 const productSeeds = require('./productSeed.json');
 const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
   try {
-    await cleanDB();
+    await cleanDB("Product", "products");
 
-    await cleanDB();
+    await Product.create(productSeeds);
 
-    // await User.create(userSeeds);
-
-    for (let i = 0; i < productSeeds.length; i++) {
-      // const { _id, thoughtAuthor } = await Thought.create(thoughtSeeds[i]);
-      // const user = await User.findOneAndUpdate(
-      //   { username: thoughtAuthor },
-      //   {
-      //     $addToSet: {
-      //       thoughts: _id,
-      //     },
-      //   }
-      // );
-    }
-  } catch (err) {
+    // for (let i = 0; i < productSeeds.length; i++) {
+    //   const { _id, thoughtAuthor } = await Thought.create(thoughtSeeds[i]);
+    //   const user = await User.findOneAndUpdate(
+    //     { username: thoughtAuthor },
+    //     {
+    //       $addToSet: {
+    //         thoughts: _id,
+    //       },
+    //     }
+    //   );
+    // }
+  } 
+  catch (err) {
     console.error(err);
     process.exit(1);
   }
