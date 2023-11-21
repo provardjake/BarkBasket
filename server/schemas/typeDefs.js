@@ -11,7 +11,7 @@ const typeDefs = `
         _id: ID
         name: String
         category: String
-        price: Int
+        price: Float
         stock: Int
         description: String
         image: String
@@ -20,7 +20,7 @@ const typeDefs = `
     type Cart{
         productId: ID
         name: String
-        price: Int
+        price: Float
     }
 
     type Auth{
