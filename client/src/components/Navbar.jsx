@@ -69,13 +69,13 @@ export default function NavMenu() {
             <NavLink to="/home">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/resume">Resume</NavLink>
+            <NavLink to="/shop">Shop</NavLink>
           </li>
           <li>
-            <NavLink to="/projects">Projects</NavLink>
+            <NavLink to="/cart">Cart</NavLink>
           </li>
           <li>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/contact">Contact Us</NavLink>
           </li>
         </ul>
       </NavMenuStyles>
