@@ -6,7 +6,7 @@ const resolvers = {
     Query: {
         me: async (parent, args, context) => {
             if(context.user){
-                return User.findOne({_id: context.user._id}).populate("cart");
+                return User.findOne({_id: context.user._id});
             }
             throw AuthenticationError;
         },
@@ -41,11 +41,11 @@ const resolvers = {
 
             return {token, user};
         },
-        addToCart: async (parent, {productId, userId}, context) =>{
+        addToCart: async (parent, {productId}, context) =>{
             if(context.user){
                 const product = Product.findOne({_id: productId});
                 return User.findOneAndUpdate(
-                    {_id: userId},
+                    {_id: context.user._id},
                     {$push: {
                         cart: {
                             productId: product._id,
@@ -61,20 +61,32 @@ const resolvers = {
             }
             throw AuthenticationError;
         },
-        removeFromCart: async (parent, {productId, userId}, context) =>{
+        removeFromCart: async (parent, {productId}, context) =>{
             if(context.user){
                 const product = Product.findOne({_id: productId});
                 return User.findOneAndUpdate(
-                    {_id: userId},
+                    {_id: context.user._id},
                     {$pull: {
                         cart: {
                             productId: product._id,
                             name: product.name,
                             price: product.price
                         }
-                    }}
+                    }},
+                    {new: true}
                 )
             }
+            throw AuthenticationError;
+        },
+        checkout: async(parent, {userId}, context) =>{
+            if(context.user){
+                return User.findOneAndUpdate(
+                    {_id: context.user._id},
+                    {$set: {cart: []}},
+                    {new: true}
+                );
+            }
+            throw AuthenticationError;
         }
     }
 };
