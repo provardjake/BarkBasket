@@ -5,86 +5,73 @@ import SignUpForm from './SignupForm';
 import LoginForm from './LoginForm';
 
 import Auth from '../utils/auth';
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
 
-const NavMenuStyles = styled.div`
-  position: fixed;
-  z-index: 101;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem 0;
-  background: var(--blue-grey);
-  ul {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 90%;
-    text-align: center;
-    li {
-      display: inline-block;
-      border-radius: 8px;
-      transition: 0.3s ease background-color;
-      &:hover {
-        background-color: var(--deep-dark);
-      }
-    }
-    a {
-      display: inline-block;
-      font-family: 'RobotoMono Regular';
-      padding: 1rem 2rem;
-      font-size: 2rem;
-      color: var(--gray-1);
-      outline: none;
-    }
-    .active {
-      color: var(--white);
-    }
-  }
-`;
+const AppNavbar = () => {
+  // set modal display state
+  const [showModal, setShowModal] = useState(false);
 
-const ContentContainer = styled.div`
-  margin-bottom: 4rem; /* Adjust the margin-bottom based on your content height */
-`;
-
-const FooterStyles = styled.footer`
-  position: relative;
-  width: 100%;
-  text-align: center;
-  padding: 2rem;
-  background: var(--blue-grey);
-  color: var(--white);
-  z-index: 100;
-  bottom: 0;
-  position: fixed;
-`;
-
-export default function NavMenu() {
   return (
     <>
-      <NavMenuStyles>
-        <ul>
-          <li>
-            <NavLink to="/home">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/shop">Shop</NavLink>
-          </li>
-          <li>
-            <NavLink to="/cart">Cart</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact">Contact Us</NavLink>
-          </li>
-        </ul>
-      </NavMenuStyles>
-
-      <ContentContainer>{}</ContentContainer>
-
-      <FooterStyles>
-        <p>&copy; 2023 Your Website. All rights reserved.</p>
-      </FooterStyles>
+      <Navbar bg='dark' variant='dark' expand='lg'>
+        <Container fluid>
+          <Navbar.Brand as={Link} to='/'>
+            Google Books Search
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls='navbar' />
+          <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
+            <Nav className='ml-auto d-flex'>
+              <Nav.Link as={Link} to='/'>
+                Search For Books
+              </Nav.Link>
+              {/* if user is logged in show saved books and logout */}
+              {Auth.loggedIn() ? (
+                <>
+                  <Nav.Link as={Link} to='/saved'>
+                    See Your Books
+                  </Nav.Link>
+                  <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                </>
+              ) : (
+                <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+              )}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      {/* set modal data up */}
+      <Modal
+        size='lg'
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        aria-labelledby='signup-modal'>
+        {/* tab container to do either signup or login component */}
+        <Tab.Container defaultActiveKey='login'>
+          <Modal.Header closeButton>
+            <Modal.Title id='signup-modal'>
+              <Nav variant='pills'>
+                <Nav.Item>
+                  <Nav.Link eventKey='login'>Login</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Tab.Content>
+              <Tab.Pane eventKey='login'>
+                <LoginForm handleModalClose={() => setShowModal(false)} />
+              </Tab.Pane>
+              <Tab.Pane eventKey='signup'>
+                <SignUpForm handleModalClose={() => setShowModal(false)} />
+              </Tab.Pane>
+            </Tab.Content>
+          </Modal.Body>
+        </Tab.Container>
+      </Modal>
     </>
   );
-}
+};
+
+export default AppNavbar;
