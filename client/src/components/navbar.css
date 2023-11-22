@@ -1,0 +1,78 @@
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav {
+  background-color: #5EA8FF;
+  color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem; /* Add padding for space */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 1.25px;
+  margin-right: 2rem; /* Adjusted margin for spacing from the links */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.nav li {
+  margin-right: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 1rem; /* Add padding for a clickable area */
+  border-radius: 5px; /* Add border-radius for a button-like appearance */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #2e5bb7; /* Darker background on hover */
+  color: #fff;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #5EA8FF;
+  color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li:hover {
+  background-color: #2e5bb7;
+}
+
+.divider {
+  border-top: 1px solid #fff;
+  margin: 0.5rem 0;
+}
