@@ -1,5 +1,7 @@
 const {Schema, model} = require("mongoose");
 
+const categorySchema = new Schema({tag: String});
+
 const productSchema = new Schema(
     {
         name: {
