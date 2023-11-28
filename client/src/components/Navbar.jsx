@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './navbar.css';
+import {Link} from "react-router-dom";
+import Auth from "../utils/auth";
 
 const AppNavbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -11,6 +13,11 @@ const AppNavbar = () => {
   const handleMouseLeave = () => {
     setShowDropdown(false);
   };
+
+  const logout = (event) =>{
+    event.preventDefault();
+    Auth.logout();
+  }
 
   return (
     <header className="nav">
@@ -25,14 +32,23 @@ const AppNavbar = () => {
             <a href="/">Shop</a>
             {showDropdown && (
               <ul className="dropdown-menu">
-                <li><a href="/cart">Cart</a></li>
-                <li><a href="/checkout">Checkout</a></li>
+                <li><Link to="/cart">Cart</Link></li>
               </ul>
             )}
           </li>
-          <li><a href="/login">Login</a></li>
-          <li><a href="/signup">Signup</a></li>
-          <li><a href="/contact-us">Contact</a></li>
+          {Auth.loggedIn() ? (
+            <>
+            <li>Hello, {Auth.getProfile().data.username}</li>
+            <li><button onClick={logout}>Logout</button></li>
+            </>
+          ): (
+            <>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/signup">Signup</Link></li>
+            </>
+          )}
+          
+          <li><Link to="/contact-us">Contact</Link></li>
         </ul>
       </nav>
     </header>
