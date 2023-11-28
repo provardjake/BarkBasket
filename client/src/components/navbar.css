@@ -5,7 +5,7 @@ body {
 
 .nav {
   background-color: #5EA8FF;
-  color: #fff;
+  color: #f5f5f5;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -33,7 +33,7 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: #fff;
+  color: #f5f5f5;
   font-weight: bold;
   padding: 0.5rem 1rem; /* Add padding for a clickable area */
   border-radius: 5px; /* Add border-radius for a button-like appearance */
@@ -42,7 +42,7 @@ body {
 
 .nav a:hover {
   background-color: #2e5bb7; /* Darker background on hover */
-  color: #fff;
+  color: #f5f5f5;
 }
 
 /* Dropdown Styles */
@@ -57,7 +57,7 @@ body {
   top: 100%;
   left: 0;
   background-color: #5EA8FF;
-  color: #fff;
+  color: #f5f5f5;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   list-style: none;
   padding: 0;
@@ -73,6 +73,6 @@ body {
 }
 
 .divider {
-  border-top: 1px solid #fff;
+  border-top: 1px solid #f5f5f5;
   margin: 0.5rem 0;
 }
