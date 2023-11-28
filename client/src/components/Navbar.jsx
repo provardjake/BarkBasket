@@ -32,7 +32,7 @@ const AppNavbar = () => {
           </li>
           <li><a href="/login">Login</a></li>
           <li><a href="/signup">Signup</a></li>
-          <li><a href="/contactUs">Contact</a></li>
+          <li><a href="/contact-us">Contact</a></li>
         </ul>
       </nav>
     </header>
