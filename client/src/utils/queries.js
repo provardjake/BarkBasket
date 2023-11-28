@@ -29,7 +29,7 @@ export const QUERY_PRODUCTS = gql`
 }`;
 
 export const QUERY_PRODUCT = gql`
-query Query($productId: ID!) {
+query getProduct($productId: ID!) {
   product(productId: $productId) {
     _id
     category
