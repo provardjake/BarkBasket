@@ -1,7 +1,6 @@
 import { useQuery } from '@apollo/client';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
 import { QUERY_PRODUCTS } from '../utils/queries';
 
 const Home = () => {
