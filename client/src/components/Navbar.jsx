@@ -17,9 +17,6 @@ const AppNavbar = () => {
       <h1>Bark Basket</h1>
       <nav>
         <ul>
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#Login">Login</a></li>
-          <li><a href="#Signup">Signup</a></li>
           <li
             className="dropdown"
             onMouseEnter={handleMouseEnter}
@@ -30,10 +27,12 @@ const AppNavbar = () => {
               <ul className="dropdown-menu">
                 <li><a href="#Cart">Cart</a></li>
                 <li><a href="#Checkout">Checkout</a></li>
-                <li><a href="">Products</a></li>
               </ul>
             )}
           </li>
+          <li><a href="#Login">Login</a></li>
+          <li><a href="#Signup">Signup</a></li>
+          <li><a href="#Signup">Contact</a></li>
         </ul>
       </nav>
     </header>

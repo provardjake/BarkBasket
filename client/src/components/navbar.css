@@ -1,24 +1,21 @@
-
 body {
   font-family: 'Montserrat', sans-serif;
 }
 
 .nav {
   background-color: #5EA8FF;
-  color: #f5f5f5;
+  color: #fff;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem; /* Add padding for space */
-  font-family: 'Montserrat', sans-serif;
 }
 
 .nav h1 {
   font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: 1.25px;
   margin-right: 2rem; /* Adjusted margin for spacing from the links */
+  letter-spacing: 2px; /* Add letter spacing (adjust the value as needed) */
 }
 
 .nav ul {
@@ -33,7 +30,7 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: #f5f5f5;
+  color: #fff;
   font-weight: bold;
   padding: 0.5rem 1rem; /* Add padding for a clickable area */
   border-radius: 5px; /* Add border-radius for a button-like appearance */
@@ -42,7 +39,7 @@ body {
 
 .nav a:hover {
   background-color: #2e5bb7; /* Darker background on hover */
-  color: #f5f5f5;
+  color: #fff;
 }
 
 /* Dropdown Styles */
@@ -51,28 +48,63 @@ body {
   cursor: pointer;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+}
+
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #5EA8FF;
-  color: #f5f5f5;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   list-style: none;
   padding: 0;
   margin: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
 }
 
 .dropdown-menu li {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  width: 100%; /* Full width for stacked items */
+  text-align: center; /* Center the content horizontally */
+  box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 .dropdown-menu li:hover {
-  background-color: #2e5bb7;
+  background-color: #d8d6d6;
 }
 
 .divider {
-  border-top: 1px solid #f5f5f5;
+  border-top: 1px solid #ddd;
   margin: 0.5rem 0;
+}
+
+/* Isolate styles for the dropdown links */
+.dropdown-menu a {
+  color: #2e5bb7;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  color: #fff;
+  background-color: #d8d6d6;
+}
+
+/* Make the dropdown stack vertically on smaller screens */
+@media screen and (max-width: 600px) {
+  .dropdown-menu li {
+    display: block;
+  }
 }
