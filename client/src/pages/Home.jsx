@@ -1,4 +1,5 @@
 import { useQuery } from '@apollo/client';
+import ProductList from "../components/ProductList";
 
 import { QUERY_PRODUCTS } from '../utils/queries';
 
@@ -18,19 +19,14 @@ const Home = () => {
           {/* <ThoughtForm /> */}
         </div>
         <div className="col-12 col-md-8 mb-3">
-        {loading ? (
+          {loading ? (
             <div>Loading...</div>
           ) : (
-            <div>{data}</div>
-          )}
-          {/* {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <ThoughtList
-              thoughts={thoughts}
-              title="Some Feed for Thought(s)..."
+            <ProductList
+              thoughts={products}
+              title=""
             />
-          )} */}
+          )}
         </div>
       </div>
     </main>
