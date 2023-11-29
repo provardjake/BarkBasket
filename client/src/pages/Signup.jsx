@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from "react-bootstrap";
-
+import { Button } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-
 import Auth from '../utils/auth';
+import './AuthForm.css';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -26,8 +25,6 @@ const Signup = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formData);
-
     try {
       const { data } = await addUser({
         variables: { ...formData },
@@ -40,11 +37,12 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
+    <main className="auth-container flex-row justify-center mb-4">
+    <div className="col-12 col-lg-10">
+      <div className="auth-card">
+        <div className="auth-background"></div>
+        <h4 className="auth-card-header p-2">Signup</h4>
+        <div className="auth-card-body">
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -53,7 +51,7 @@ const Signup = () => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  className="form-input"
+                  className="auth-form-input"
                   placeholder="Your username"
                   name="username"
                   type="text"
@@ -61,7 +59,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="auth-form-input"
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -69,7 +67,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="auth-form-input"
                   placeholder="******"
                   name="password"
                   type="password"
@@ -77,10 +75,10 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <Button
-                  className="btn btn-block btn-primary"
+                  className="auth-btn-primary"
                   style={{ cursor: 'pointer' }}
                   type="submit"
-                  disabled = {!(formData.username && formData.email && formData.password)}
+                  disabled={!formData.username || !formData.email || !formData.password}
                 >
                   Submit
                 </Button>
@@ -88,7 +86,7 @@ const Signup = () => {
             )}
 
             {error && (
-              <div className="my-3 p-3 bg-danger text-white">
+              <div className="auth-error-message">
                 There Was an error with your Sign up
               </div>
             )}
