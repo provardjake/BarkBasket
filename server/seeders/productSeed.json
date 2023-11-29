@@ -4,7 +4,7 @@
     "category": "food",
     "price": 39.99,
     "stock": 150,
-    "image": "https://example.com/dogfood.jpg",
+    "image": "Organic Grain-Free Dog Food.jpeg",
     "description": "Premium organic grain-free dog food made with natural ingredients for optimal health and digestion."
   },
   {
@@ -12,7 +12,7 @@
     "category": "toys",
     "price": 12.50,
     "stock": 200,
-    "image": "https://example.com/squeakytoy.jpg",
+    "image": "Interactive Squeaky Dog Toy.jpeg",
     "description": "Durable and interactive squeaky toy for dogs, designed to provide hours of entertainment and mental stimulation."
   },
   {
@@ -20,7 +20,7 @@
     "category": "accessories",
     "price": 24.99,
     "stock": 90,
-    "image": "https://example.com/aquarium-heater.jpg",
+    "image": "Aquarium Heater.jpeg",
     "description": "Precise temperature-adjustable aquarium heater to maintain optimal water conditions."
   },
   {
@@ -28,7 +28,7 @@
     "category": "grooming",
     "price": 45.99,
     "stock": 100,
-    "image": "https://example.com/groomingkit.jpg",
+    "image": "Pet Grooming Kit with Brushes and Clippers.jpeg",
     "description": "Complete pet grooming kit with brushes and clippers for professional grooming sessions at home."
   },
   {
@@ -36,7 +36,7 @@
     "category": "toys",
     "price": 8.99,
     "stock": 120,
-    "image": "https://example.com/catniptoy.jpg",
+    "image": "Natural Catnip Toy Ball.jpeg",
     "description": "All-natural catnip toy ball that encourages exercise and mental stimulation for cats."
   },
   {
@@ -44,7 +44,7 @@
     "category": "food",
     "price": 29.50,
     "stock": 180,
-    "image": "https://example.com/salmoncatfood.jpg",
+    "image": "Grain-Free Salmon Cat Food.jpeg",
     "description": "Nutritious grain-free salmon cat food providing essential nutrients and Omega-3 fatty acids."
   },
   {
@@ -52,7 +52,7 @@
     "category": "toys",
     "price": 15.75,
     "stock": 150,
-    "image": "https://example.com/ropechewtoys.jpg",
+    "image": "Dog Rope Chew Toy Set.jpeg",
     "description": "Set of durable rope chew toys for dogs, aiding dental health and teething relief."
   },
   {
@@ -60,7 +60,7 @@
     "category": "grooming",
     "price": 12.99,
     "stock": 200,
-    "image": "https://example.com/hairremover.jpg",
+    "image": "Pet Hair Remover Roller.jpeg",
     "description": "Efficient pet hair remover roller for furniture and clothing, easy to use and clean."
   },
   {
@@ -68,7 +68,7 @@
     "category": "toys",
     "price": 17.25,
     "stock": 130,
-    "image": "https://example.com/puzzledogtoy.jpg",
+    "image": "Treat Dispensing Dog Puzzle Toy.jpeg",
     "description": "Interactive treat-dispensing puzzle toy for mental stimulation and entertainment for dogs."
   },
   {
@@ -76,7 +76,7 @@
     "category": "accessories",
     "price": 19.99,
     "stock": 170,
-    "image": "https://example.com/cat-litter.jpg",
+    "image": "Natural Cat Litter.jpeg",
     "description": "Biodegradable and odor-absorbing natural cat litter made from sustainable materials."
   },
   {
@@ -84,7 +84,7 @@
     "category": "toys",
     "price": 9.49,
     "stock": 100,
-    "image": "https://example.com/bird-perch.jpg",
+    "image": "Colorful Bird Perch Swing.jpeg",
     "description": "Vibrant and durable perch swing for birds, providing exercise and entertainment."
   },
   {
@@ -92,7 +92,7 @@
     "category": "toys",
     "price": 7.99,
     "stock": 120,
-    "image": "https://example.com/hamster-wheel.jpg",
+    "image": "Hamster Exercise Wheel.jpeg",
     "description": "Quiet and safe exercise wheel designed for hamsters to keep them active and healthy."
   },
   {
@@ -100,7 +100,7 @@
     "category": "food",
     "price": 12.75,
     "stock": 150,
-    "image": "https://example.com/bird-seed.jpg",
+    "image": "Nutritious Bird Seed Mix.jpeg",
     "description": "Healthy and balanced bird seed mix containing a variety of seeds and grains."
   },
   {
@@ -108,7 +108,7 @@
     "category": "accessories",
     "price": 11.99,
     "stock": 100,
-    "image": "https://example.com/hamster-house.jpg",
+    "image": "Hamster Exercise Wheel.jpeg",
     "description": "Cozy hideout house for hamsters providing a safe and comfortable resting place."
   },
   {
@@ -116,7 +116,7 @@
     "category": "accessories",
     "price": 18.50,
     "stock": 90,
-    "image": "https://example.com/bird-cage-perch.jpg",
+    "image": "Bird Cage Perch Set.jpeg",
     "description": "Set of assorted perches for bird cages, offering variety and stimulation for birds."
   },
   {
@@ -124,7 +124,7 @@
     "category": "toys",
     "price": 14.25,
     "stock": 110,
-    "image": "https://example.com/hamster-chew-toys.jpg",
+    "image": "Hamster Chew Toys Bundle.jpeg",
     "description": "Bundle of chew toys designed to promote dental health, and prevent boredom in hamsters."
   },
   {
@@ -132,7 +132,7 @@
     "category": "accessories",
     "price": 22.99,
     "stock": 80,
-    "image": "https://example.com/bird-bath-house.jpg",
+    "image": "Bird Bath House.jpeg",
     "description": "Functional and decorative bird bath house for birds to bathe and keep feathers clean."
   },
   {
@@ -140,7 +140,7 @@
     "category": "toys",
     "price": 10.99,
     "stock": 100,
-    "image": "https://example.com/hamster-exercise-ball.jpg",
+    "image": "Hamster Exercise Ball.jpeg",
     "description": "Transparent exercise ball for hamsters, providing safe and fun roaming around the house."
   },
   {
@@ -148,7 +148,7 @@
     "category": "accessories",
     "price": 15.25,
     "stock": 90,
-    "image": "https://example.com/bird-cage-accessories.jpg",
+    "image": "Colorful Bird Cage Accessories Set.jpeg",
     "description": "Set of vibrant bird cage accessories including perches, swings, and feeding bowls."
   },
   {
@@ -156,7 +156,7 @@
     "category": "accessories",
     "price": 8.49,
     "stock": 120,
-    "image": "https://example.com/hamster-bedding.jpg",
+    "image": "Hamster Bedding Material.jpeg",
     "description": "Soft and absorbent bedding material for hamsters, providing comfort and hygiene."
   },
   {
@@ -164,7 +164,7 @@
     "category": "food",
     "price": 11.50,
     "stock": 85,
-    "image": "https://example.com/bird-treat-sticks.jpg",
+    "image": "Treat Sticks for Birds.jpeg",
     "description": "Nutritious treat sticks enriched with vitamins and minerals for bird's well-being."
   },
   {
@@ -172,7 +172,7 @@
     "category": "toys",
     "price": 9.75,
     "stock": 110,
-    "image": "https://example.com/hamster-ladder.jpg",
+    "image": "Hamster Exercise Ladder.jpeg",
     "description": "Climbing ladder toy designed to stimulate exploration and exercise for hamsters."
   },
   {
@@ -180,7 +180,7 @@
     "category": "accessories",
     "price": 7.99,
     "stock": 150,
-    "image": "https://example.com/aquarium-gravel.jpg",
+    "image": "Colorful Aquarium Gravel.jpeg",
     "description": "Vibrant and non-toxic aquarium gravel, enhancing the visual appeal of fish tanks."
   },
   {
@@ -188,7 +188,7 @@
     "category": "food",
     "price": 14.50,
     "stock": 120,
-    "image": "https://example.com/fish-flake-food.jpg",
+    "image": "Tropical Fish Flake Food.jpeg",
     "description": "Nutritious flake food for tropical fish, providing essential nutrients for optimal health."
   },
   {
@@ -196,7 +196,7 @@
     "category": "accessories",
     "price": 19.99,
     "stock": 100,
-    "image": "https://example.com/aquarium-air-pump.jpg",
+    "image": "Aquarium Air Pump.jpeg",
     "description": "Quiet and energy-efficient aquarium air pump for oxygenating fish tanks."
   },
   {
@@ -204,7 +204,7 @@
     "category": "accessories",
     "price": 12.75,
     "stock": 110,
-    "image": "https://example.com/algae-scrubber.jpg",
+    "image": "Algae Scrubber Magnet Cleaner.jpeg",
     "description": "Dual-sided magnet cleaner for effectively removing algae from aquarium glass."
   },
   {
@@ -212,7 +212,7 @@
     "category": "food",
     "price": 9.99,
     "stock": 130,
-    "image": "https://example.com/bloodworms.jpg",
+    "image": "Freeze-Dried Bloodworms.jpeg",
     "description": "High-protein freeze-dried bloodworms, a nutritious treat for freshwater fish."
   },
   {
@@ -220,7 +220,7 @@
     "category": "accessories",
     "price": 24.99,
     "stock": 90,
-    "image": "https://example.com/aquarium-heater.jpg",
+    "image": "Aquarium Heater 2.jpeg",
     "description": "Precise temperature-adjustable aquarium heater to maintain optimal water conditions."
   }
 ]
