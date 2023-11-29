@@ -52,7 +52,7 @@ const Signup = () => {
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="auth-form-input"
-                  placeholder="Your username"
+                  placeholder="Create Username"
                   name="username"
                   type="text"
                   value={formData.name}
@@ -60,7 +60,7 @@ const Signup = () => {
                 />
                 <input
                   className="auth-form-input"
-                  placeholder="Your email"
+                  placeholder="Create Email"
                   name="email"
                   type="email"
                   value={formData.email}
@@ -68,7 +68,7 @@ const Signup = () => {
                 />
                 <input
                   className="auth-form-input"
-                  placeholder="******"
+                  placeholder="Create Password"
                   name="password"
                   type="password"
                   value={formData.password}
