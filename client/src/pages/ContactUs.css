@@ -1,0 +1,68 @@
+.contact-us {
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .contact-us h2 {
+    background-color: #5EA8FF;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 2rem;
+    border-bottom: 1px solid #ddd;
+    margin-top: 0;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .contact-us form,
+  .contact-us .thank-you-message {
+    padding: 20px;
+  }
+  
+  .contact-us label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .contact-us input[type='text'],
+  .contact-us input[type='email'],
+  .contact-us textarea {
+    width: calc(100% - 30px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .contact-us textarea {
+    resize: vertical;
+  }
+  
+  .contact-us button[type='submit'] {
+    background-color: #068df5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    width: calc(100% - 30px);
+    font-size: 1.2rem;
+  }
+  
+  .contact-us button[type='submit']:hover {
+    background-color: #3772ad;
+  }
+  
+  .contact-us .thank-you-message {
+    background-color: rgba(199, 230, 248, 0.7); /* Adjust the color and opacity as needed */
+    border-radius: 8px;
+    color: #000;
+    font-size: 1rem;
+  }
+  

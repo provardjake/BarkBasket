@@ -32,7 +32,7 @@
 }
 
 .auth-background {
-  background: url('../assets/images/cute-pet-collage-isolated.jpg') center/contain no-repeat fixed;
+  background: url('/images/cute-pet-collage-isolated.jpg') center/contain no-repeat fixed;
   background-color: rgba(255, 255, 255, 0.7);
   position: absolute;
   top: 0;
