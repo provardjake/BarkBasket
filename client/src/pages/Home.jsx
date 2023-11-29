@@ -24,7 +24,7 @@ const Home = () => {
           products &&
             products.map((product) => (
               <Card style={{ width: '18rem' }} key= {product._id}>
-              <Card.Img variant="top" src="" />
+              <Card.Img variant="top" src={product.image} />
               <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>
