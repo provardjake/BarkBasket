@@ -1,6 +1,22 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
+const cartSchema = new Schema({
+    productId: {
+        type: String,
+        required: true
+    },
+    name: {
+        type: String
+    },
+    price: {
+        type: Number
+    },
+    image: {
+        type: String
+    }
+})
+
 const userSchema = new Schema(
     {
         username: {
@@ -18,19 +34,7 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-        cart: [
-            {
-                productId: {
-                    type: Schema.Types.ObjectId,
-                },
-                name: {
-                    type: String,
-                },
-                price: {
-                    type: Number,
-                }
-            }
-        ],
+        cart: [cartSchema],
     },
     {
         toJSON: {

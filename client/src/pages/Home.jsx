@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -5,10 +6,12 @@ import { QUERY_PRODUCTS } from '../utils/queries';
 import Auth from "../utils/auth";
 import { ADD_TO_CART } from "../utils/mutations";
 import { useMutation } from '@apollo/client';
+import './Home.css'; // Import the Home.css file
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_PRODUCTS);
   const products = data?.products || [];
+  const [addedToCart, setAddedToCart] = useState({});
 
   const [addToCart, {error}] = useMutation(ADD_TO_CART);
 
@@ -20,11 +23,20 @@ const Home = () => {
     if(!token){
       return false;
     }
+    console.log(product._id);
 
     try{
       const response = await addToCart({
-        variables: {productId: product._id}
+        variables: {
+          productData: {
+            productId: product._id,
+            name: product.name,
+            price: product.price,
+            image: product.image
+          }
+        }
       });
+
     }
     catch(err){
       console.error(err);
@@ -32,26 +44,21 @@ const Home = () => {
   }
 
   return (
-    <main>
-      <div className="flex-row justify-center">
-        <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
-        >
-        </div>
-        <div className="col-12 col-md-8 mb-3">
+    <main className="main-container">
+      <h2>Shop Products</h2>
+      <div className="">
+        {/* Other content */}
+        <div className="card-container">
           {loading ? (
             <div>Loading...</div>
           ) : (
-          products &&
+            products &&
             products.map((product) => (
-              <Card style={{ width: '18rem' }} key= {product._id}>
+            <Card className="product-card" key= {product._id}>
               <Card.Img variant="top" src={product.image} />
               <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
-                <Card.Text>
-                  {product.price}
-                </Card.Text>
+                <Card.Text>{product.price}</Card.Text>
                 {Auth.loggedIn() ? (
                   <>
                     <Button variant="primary" onClick={() =>handleAddToCart(product)}>Add To Cart</Button>
@@ -64,7 +71,7 @@ const Home = () => {
                 }
               </Card.Body>
             </Card>
-        ))
+            ))
           )}
         </div>
       </div>
