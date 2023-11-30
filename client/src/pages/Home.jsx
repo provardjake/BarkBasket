@@ -10,8 +10,25 @@ const Home = () => {
   const { loading, data } = useQuery(QUERY_PRODUCTS);
   const products = data?.products || [];
 
-  const addToCart = (product) =>{
-    
+  const [addToCart, {error}] = useMutation(ADD_TO_CART);
+
+  const handleAddToCart = async (product) =>{
+    console.log(product);
+
+    const token = Auth.loggedIn() ? Auth.getToken : null;
+
+    if(!token){
+      return false;
+    }
+
+    try{
+      const response = await addToCart({
+        variables: {productId: product._id}
+      });
+    }
+    catch(err){
+      console.error(err);
+    }
   }
 
   return (
@@ -37,11 +54,11 @@ const Home = () => {
                 </Card.Text>
                 {Auth.loggedIn() ? (
                   <>
-                    <Button variant="primary" onClick={addToCart(product)}>Add To Cart</Button>
+                    <Button variant="primary" onClick={() =>handleAddToCart(product)}>Add To Cart</Button>
                   </>
                 ):(
                   <>
-                    <Button variant="primary" onClick={addToCart(product)} style={{display: "none"}}>Add To Cart</Button>
+                    <Button variant="primary" onClick={() =>handleAddToCart(product)} style={{display: "none"}}>Add To Cart</Button>
                   </>
                 )
                 }
