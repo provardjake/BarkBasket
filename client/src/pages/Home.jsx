@@ -11,19 +11,16 @@ import './Home.css'; // Import the Home.css file
 const Home = () => {
   const { loading, data } = useQuery(QUERY_PRODUCTS);
   const products = data?.products || [];
-  const [addedToCart, setAddedToCart] = useState({});
 
   const [addToCart, {error}] = useMutation(ADD_TO_CART);
 
   const handleAddToCart = async (product) =>{
-    console.log(product);
 
     const token = Auth.loggedIn() ? Auth.getToken : null;
 
     if(!token){
       return false;
     }
-    console.log(product._id);
 
     try{
       const response = await addToCart({
