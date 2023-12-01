@@ -1,16 +1,17 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
-import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
-import './AuthForm.css';
+// signup.jsx
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../utils/mutations";
+import Auth from "../utils/auth";
+import "./AuthForm.css";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
+    username: "",
+    email: "",
+    password: "",
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
@@ -37,15 +38,15 @@ const Signup = () => {
   };
 
   return (
-    <main className="auth-container flex-row justify-center mb-4">
-    <div className="col-12 col-lg-10">
-      <div className="auth-card">
-        <div className="auth-background"></div>
-        <h4 className="auth-card-header p-2">Signup</h4>
-        <div className="auth-card-body">
+    <main className="auth-container signup-page flex-row justify-center mb-4">
+      <div className="col-12 col-lg-10">
+        <div className="auth-card signup-page">
+          <div className="auth-background"></div>
+          <h4 className="auth-card-header p-2">Signup</h4>
+          <div className="auth-card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
+                Success! You may now head{" "}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
@@ -76,9 +77,11 @@ const Signup = () => {
                 />
                 <Button
                   className="auth-btn-primary"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                   type="submit"
-                  disabled={!formData.username || !formData.email || !formData.password}
+                  disabled={
+                    !formData.username || !formData.email || !formData.password
+                  }
                 >
                   Submit
                 </Button>
@@ -90,6 +93,15 @@ const Signup = () => {
                 There Was an error with your Sign up
               </div>
             )}
+
+            <div className="white-space">
+              <p className="auth-bottom-link">
+                Already have an account?{" "}
+                <Link to="/login" className="login-link">
+                  Login
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>

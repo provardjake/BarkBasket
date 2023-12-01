@@ -1,20 +1,21 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
-import './AuthForm.css';
+// login.jsx
+import { useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../utils/mutations";
+import Auth from "../utils/auth";
+import "./AuthForm.css";
 
 const Login = (props) => {
-  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [formData, setFormData] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   useEffect(() => {
-    document.body.classList.add('auth-page');
+    document.body.classList.add("auth-page");
     return () => {
-      document.body.classList.remove('auth-page');
+      document.body.classList.remove("auth-page");
     };
   }, []);
 
@@ -40,21 +41,21 @@ const Login = (props) => {
     }
 
     setFormData({
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     });
   };
 
   return (
-    <main className="auth-container flex-row justify-center mb-4">
-    <div className="col-12 col-lg-10">
-      <div className="auth-card">
-        <div className="auth-background"></div>
-        <h4 className="auth-card-header p-2">Login</h4>
-        <div className="auth-card-body">
+    <main className="auth-container login-page flex-row justify-center mb-4">
+      <div className="col-12 col-lg-10">
+        <div className="auth-card login-page">
+          <div className="auth-background"></div>
+          <h4 className="auth-card-header p-2">Login</h4>
+          <div className="auth-card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
+                Success! You may now head{" "}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
@@ -77,7 +78,7 @@ const Login = (props) => {
                 />
                 <Button
                   className="auth-btn-primary"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                   type="submit"
                   disabled={!formData.email || !formData.password}
                 >
@@ -91,6 +92,15 @@ const Login = (props) => {
                 There was an error logging you in
               </div>
             )}
+
+            <div className="white-space">
+              <p className="auth-bottom-link">
+                Don't have an account?{" "}
+                <Link to="/signup" className="login-link">
+                  Create one
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>
