@@ -1,4 +1,6 @@
-.auth-card {
+/* AuthForm.css */
+
+.auth-card.login-page {
   position: relative;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -9,44 +11,21 @@
   margin-top: 100px;
 }
 
-.auth-card::before {
+.auth-card.login-page::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(199, 230, 248);
-  z-index: -1;
-  border-radius: 15px;
-}
-
-.auth-card .auth-card-header {
-  background-color: #5EA8FF;
-  color: #ffffff;
-  padding: 20px;
-  font-size: 2rem;
-  border-bottom: 1px solid #ddd;
-}
-
-.auth-card .auth-card-body {
-  padding: 20px;
-}
-
-.auth-background {
-  background: url('/images/cute-pet-collage-isolated.jpg') center/contain no-repeat fixed;
+  background: url('/images/cute-animals-group-white-background.jpg') center/cover no-repeat fixed;
   background-color: rgba(255, 255, 255, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   border-radius: 15px;
   z-index: -1;
   opacity: 0.7;
 }
 
-.auth-card .auth-card-header {
+.auth-card.login-page .auth-card-header {
   background-color: #5EA8FF;
   color: #ffffff;
   padding: 20px;
@@ -54,11 +33,11 @@
   border-bottom: 1px solid #ddd;
 }
 
-.auth-card .auth-card-body {
+.auth-card.login-page .auth-card-body {
   padding: 20px;
 }
 
-.auth-card .auth-form-input {
+.auth-card.login-page .auth-form-input {
   width: 100%;
   padding: 15px;
   margin-bottom: 20px;
@@ -72,7 +51,7 @@
   background-color: rgba(255, 255, 255, 0.95);
 }
 
-.auth-card .auth-btn-primary {
+.auth-card.login-page .auth-btn-primary {
   background-color: #068df5;
   color: #fff;
   border: none;
@@ -83,11 +62,11 @@
   font-size: 1.2rem;
 }
 
-.auth-card .auth-btn-primary:hover {
+.auth-card.login-page .auth-btn-primary:hover {
   background-color: #3772ad;
 }
 
-.auth-card .auth-error-message {
+.auth-card.login-page .auth-error-message {
   margin-top: 20px;
   padding: 15px;
   border-radius: 8px;
@@ -96,10 +75,171 @@
   font-size: 1rem;
 }
 
+.white-space {
+  margin-top: 20px;
+}
+
+.auth-card.login-page .auth-error-message,
+.auth-bottom-link,
+.login-link {
+  background-color: #068df5;
+  color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.auth-card.login-page .auth-error-message {
+  margin-top: 6px;
+}
+
+.auth-bottom-link,
+.login-link {
+  margin-top: 3px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.login-link:hover {
+  color: blue;
+}
+
 /* Additional adjustments for small screens */
 @media screen and (max-width: 375px) {
-  .auth-card {
-    width: 100%;
-    margin: 20px;
+  .auth-card.login-page {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+/* Additional adjustments for large screens */
+@media screen and (min-width: 1200px) {
+  .auth-card.login-page::before {
+    background-size: contain;
+  }
+}
+
+/* AuthForm.css - Signup Page */
+
+.auth-card.signup-page {
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 100%;
+  width: 400px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.auth-card.signup-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/cute-pet-collage-isolated.jpg') center/cover no-repeat fixed;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.auth-card.signup-page .auth-card-header {
+  background-color: #5EA8FF;
+  color: #ffffff;
+  padding: 20px;
+  font-size: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.auth-card.signup-page .auth-card-body {
+  padding: 20px;
+}
+
+.auth-card.signup-page .auth-form-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.auth-card.signup-page .auth-btn-primary {
+  background-color: #068df5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.auth-card.signup-page .auth-btn-primary:hover {
+  background-color: #3772ad;
+}
+
+.auth-card.signup-page .auth-error-message {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f30736;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.auth-card.signup-page .auth-error-message,
+.auth-bottom-link,
+.login-link {
+  background-color: #068df5;
+  color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.auth-card.signup-page .auth-error-message {
+  margin-top: 6px;
+}
+
+.auth-bottom-link,
+.login-link {
+  margin-top: 3px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.login-link:hover {
+  color: blue;
+}
+
+/* Additional adjustments for small screens */
+@media screen and (max-width: 375px) {
+  .auth-card.signup-page {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+/* Additional adjustments for large screens */
+@media screen and (min-width: 1200px) {
+  .auth-card.signup-page::before {
+    background-size: contain;
   }
 }
