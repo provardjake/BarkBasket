@@ -27,8 +27,10 @@ mutation addUser($username: String!, $email: String!, $password: String!) {
 `;
 
 export const ADD_TO_CART = gql`
-  mutation addToCart($productId: ID!) {
-    addToCart(productId: $productId) {
+  mutation addToCart($productData: ProductData!) {
+    addToCart(productData: $productData) {
+      _id
+      username
       cart {
         name
         price

@@ -18,7 +18,7 @@ const typeDefs = `
     }
 
     type Cart{
-        productId: ID
+        productId: String
         name: String
         price: Float
     }
@@ -26,6 +26,13 @@ const typeDefs = `
     type Auth{
         token: ID!
         user: User
+    }
+
+    input ProductData {
+        productId: String!
+        name: String
+        price: Float
+        image: String
     }
 
     type Query{
@@ -38,7 +45,7 @@ const typeDefs = `
     type Mutation{
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String): Auth
-        addToCart(productId: ID!): User
+        addToCart(productData: ProductData!): User
         removeFromCart(productId: ID!): User
         checkout(userId: ID!): User
     }

@@ -41,23 +41,16 @@ const resolvers = {
 
             return {token, user};
         },
-        addToCart: async (parent, {productId}, context) =>{
+        addToCart: async (parent, {productData}, context) =>{
             if(context.user){
-                const product = Product.findOne({_id: productId});
-                return User.findOneAndUpdate(
+                const updatedUser = User.findOneAndUpdate(
                     {_id: context.user._id},
-                    {$push: {
-                        cart: {
-                            productId: product._id,
-                            name: product.name,
-                            price: product.price
-                        }
-                    }},
+                    {$push: {cart: productData}},
                     {
                         new: true,
-                        runValidators: true
                     }
                 );
+                return updatedUser;
             }
             throw AuthenticationError;
         },
