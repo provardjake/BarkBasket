@@ -3,8 +3,10 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   overflow: hidden;
+  max-width: 100%;
   width: 400px;
   margin: auto;
+  margin-top: 100px;
 }
 
 .auth-card::before {
@@ -14,7 +16,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(199, 230, 248); /* Adjust the color and opacity as needed */
+  background-color: rgb(199, 230, 248);
   z-index: -1;
   border-radius: 15px;
 }
@@ -41,7 +43,7 @@
   bottom: 0;
   border-radius: 15px;
   z-index: -1;
-  opacity: 0.7; /* Adjust the opacity as needed */
+  opacity: 0.7;
 }
 
 .auth-card .auth-card-header {
@@ -67,9 +69,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(255, 255, 255, 0.95); /* Adjust the opacity as needed */
+  background-color: rgba(255, 255, 255, 0.95);
 }
-
 
 .auth-card .auth-btn-primary {
   background-color: #068df5;
@@ -93,4 +94,12 @@
   background-color: #f30736;
   color: #fff;
   font-size: 1rem;
+}
+
+/* Additional adjustments for small screens */
+@media screen and (max-width: 375px) {
+  .auth-card {
+    width: 100%;
+    margin: 20px;
+  }
 }

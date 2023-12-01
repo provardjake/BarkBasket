@@ -5,7 +5,7 @@
     "price": 39.99,
     "stock": 150,
     "image": "/images/Organic Grain-Free_Dog_Food.jpeg",
-    "description": "Premium organic grain-free dog food made with natural ingredients for optimal health and digestion."
+    "description": "Premium organic grain-free dog food made with natural ingredients for optimal health."
   },
   {
     "name": "Interactive Squeaky Dog Toy",
@@ -13,23 +13,23 @@
     "price": 12.50,
     "stock": 200,
     "image": "images/Interactive_Squeaky_Dog_Toy.jpeg",
-    "description": "Durable and interactive squeaky toy for dogs, designed to provide hours of entertainment and mental stimulation."
+    "description": "Interactive squeaky toy for dogs, designed to provide mental stimulation."
   },
   {
-    "name": "Aquarium Heater",
+    "name": "Base Aquarium Heater",
     "category": "accessories",
     "price": 24.99,
     "stock": 90,
-    "image": "/images/Aquarium Heater.jpeg",
+    "image": "/images/Aquarium_Heater.jpeg",
     "description": "Precise temperature-adjustable aquarium heater to maintain optimal water conditions."
   },
   {
-    "name": "Pet Grooming Kit with Brushes and Clippers",
+    "name": "Dog Grooming Kit with Brushes",
     "category": "grooming",
     "price": 45.99,
     "stock": 100,
     "image": "images/Pet_Grooming_Kit_with_Brushes_and_Clippers.jpeg",
-    "description": "Complete pet grooming kit with brushes and clippers for professional grooming sessions at home."
+    "description": "Complete pet grooming kit with brushes for professional grooming sessions at home."
   },
   {
     "name": "Natural Catnip Toy Ball",
@@ -42,10 +42,10 @@
   {
     "name": "Grain-Free Salmon Cat Food",
     "category": "food",
-    "price": 29.50,
+    "price": 29.55,
     "stock": 180,
     "image": "images/Grain-Free_Salmon_Cat_Food.jpeg",
-    "description": "Nutritious grain-free salmon cat food providing essential nutrients and Omega-3 fatty acids."
+    "description": "Nutritious grain-free salmon cat food providing essential nutrients and Omega-3s."
   },
   {
     "name": "Dog Rope Chew Toy Set",
@@ -69,7 +69,7 @@
     "price": 17.25,
     "stock": 130,
     "image": "images/Treat_Dispensing_Dog_Puzzle_Toy.jpeg",
-    "description": "Interactive treat-dispensing puzzle toy for mental stimulation and entertainment for dogs."
+    "description": "Interactive treat-dispensing puzzle toy for mental stimulation and entertainment."
   },
   {
     "name": "Natural Cat Litter",
@@ -114,7 +114,7 @@
   {
     "name": "Bird Cage Perch Set",
     "category": "accessories",
-    "price": 18.50,
+    "price": 18.55,
     "stock": 90,
     "image": "images/Bird_Cage_Perch_Set.jpeg",
     "description": "Set of assorted perches for bird cages, offering variety and stimulation for birds."
@@ -125,7 +125,7 @@
     "price": 14.25,
     "stock": 110,
     "image": "images/Hamster_Chew_Toys_Bundle.jpeg",
-    "description": "Bundle of chew toys designed to promote dental health, and prevent boredom in hamsters."
+    "description": "Bundle of chew toys to promote dental health & prevent boredom in hamsters."
   },
   {
     "name": "Bird Bath House",
@@ -141,15 +141,15 @@
     "price": 10.99,
     "stock": 100,
     "image": "images/Hamster_Exercise_Ball.jpeg",
-    "description": "Transparent exercise ball for hamsters, providing safe and fun roaming around the house."
+    "description": "Exercise ball for hamsters, providing safe and fun roaming around the house."
   },
   {
-    "name": "Colorful Bird Cage Accessories Set",
+    "name": "Colorful Bird Cage Accessories",
     "category": "accessories",
     "price": 15.25,
     "stock": 90,
     "image": "images/Colorful_Bird_Cage_Accessories_Set.jpeg",
-    "description": "Set of vibrant bird cage accessories including perches, swings, and feeding bowls."
+    "description": "Set of bird cage accessories including perches, swings, and feeding bowls."
   },
   {
     "name": "Hamster Bedding Material",
@@ -186,10 +186,10 @@
   {
     "name": "Tropical Fish Flake Food",
     "category": "food",
-    "price": 14.50,
+    "price": 14.55,
     "stock": 120,
     "image": "images/Tropical_Fish_Flake_Food.jpeg",
-    "description": "Nutritious flake food for tropical fish, providing essential nutrients for optimal health."
+    "description": "Nutritious flake food for fish, providing essential nutrients for optimal health."
   },
   {
     "name": "Aquarium Air Pump",
@@ -216,11 +216,27 @@
     "description": "High-protein freeze-dried bloodworms, a nutritious treat for freshwater fish."
   },
   {
-    "name": "Aquarium Heater 2",
+    "name": "Aquarium Heater",
     "category": "accessories",
     "price": 24.99,
     "stock": 90,
     "image": "images/Aquarium_Heater_2.jpeg",
     "description": "Precise temperature-adjustable aquarium heater to maintain optimal water conditions."
+  },
+  {
+    "name": "Robot Treat Dispenser for Dogs",
+    "category": "accessories",
+    "price": 69.99,
+    "stock": 50,
+    "image": "images/Robot_Treat_Dispenser.jpeg",
+    "description": "Robot treat dispenser designed for dogs, dispenses treats at set intervals."
+  },
+  {
+    "name": "Scratch Post for Cats",
+    "category": "accessories",
+    "price": 34.99,
+    "stock": 70,
+    "image": "images/Scratch_Post_Cats.jpeg",
+    "description": "Durable and sturdy scratch post for cats, designed to maintain claw health."
   }
 ]
