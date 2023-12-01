@@ -37,11 +37,12 @@ const AppNavbar = () => {
             )}
           </li>
           {Auth.loggedIn() ? (
-            <>
-            <li>Hello, {Auth.getProfile().data.username}</li>
-            <li><button onClick={logout}>Logout</button></li>
-            </>
-          ): (
+            <li className="user-info">
+            <span className="username">Hello, {Auth.getProfile().data.username}</span>
+            <button onClick={logout}>Logout</button>
+          </li>
+        ) : (
+        
             <>
             <li><Link to="/login">Login</Link></li>
             <li><Link to="/signup">Signup</Link></li>
