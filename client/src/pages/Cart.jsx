@@ -61,12 +61,12 @@ const Cart = () =>{
     }
 
     return(
-        <main>
+        <main className='main-container'>
             {}
             <h2>Your Cart</h2>
             <Button variant='primary' onClick={() =>handleCheckout()}>Checkout</Button>
             <div>
-                <div>
+                <div className='card-container'>
                     {loading ? (
                         <div>Loading...</div>
                     ): (
