@@ -56,18 +56,12 @@ const resolvers = {
         },
         removeFromCart: async (parent, {productId}, context) =>{
             if(context.user){
-                const product = Product.findOne({_id: productId});
-                return User.findOneAndUpdate(
+                const updatedUser = await User.findOneAndUpdate(
                     {_id: context.user._id},
-                    {$pull: {
-                        cart: {
-                            productId: product._id,
-                            name: product.name,
-                            price: product.price
-                        }
-                    }},
+                    {$pull: {cart: {productId}}},
                     {new: true}
-                )
+                );
+                return updatedUser;
             }
             throw AuthenticationError;
         },

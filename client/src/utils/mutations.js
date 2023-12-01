@@ -35,12 +35,13 @@ export const ADD_TO_CART = gql`
         name
         price
         productId
+        image
       }
     }
   }`;
 
   export const REMOVE_FROM_CART = gql`
-    mutation removeFromCart($productId: ID!) {
+    mutation removeFromCart($productId: String!) {
     removeFromCart(productId: $productId) {
       cart {
         name
@@ -51,7 +52,7 @@ export const ADD_TO_CART = gql`
   }`;
 
   export const CHECKOUT = gql`
-    mutation checkout($userId: ID!) {
+    mutation checkout($userId: ID) {
     checkout(userId: $userId) {
       cart {
         name

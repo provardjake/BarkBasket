@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_USER = gql`
+export const GET_ME = gql`
   query me {
     me {
       _id
@@ -8,6 +8,7 @@ export const QUERY_USER = gql`
         name
         price
         productId
+        image
       }
       password
       email
