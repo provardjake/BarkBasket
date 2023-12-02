@@ -8,6 +8,7 @@ import { REMOVE_FROM_CART } from '../utils/mutations';
 import { CHECKOUT } from '../utils/mutations';
 import "./Cart.css";
 import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
 
 const Cart = () =>{
     const {loading, data} = useQuery(GET_ME);
@@ -19,6 +20,19 @@ const Cart = () =>{
     const userData = data?.me || {};
 
     const navigate = useNavigate();
+
+    const updateCartTotal = () =>{
+        if(!loading){
+            let cartTotal = 0;
+            for(let i = 0; i < userData.cart.length; i++){
+                cartTotal = cartTotal + userData.cart[i].price;
+            }
+            return cartTotal.toFixed(2);
+        }
+
+    }
+
+    updateCartTotal();
 
     const handleDeleteFromCart = async (productId) =>{
         const token = Auth.loggedIn() ? Auth.getToken : null;
@@ -49,6 +63,7 @@ const Cart = () =>{
         try{
             const response = await checkout();
             navigate("/checkout");
+            window.location.reload();
         }
         catch(err){
             console.error(err);
@@ -62,8 +77,8 @@ const Cart = () =>{
 
     return(
         <main className='main-container'>
-            {}
             <h2>Your Cart</h2>
+            <h3>Total: ${updateCartTotal()}</h3>
             <Button variant='primary' onClick={() =>handleCheckout()}>Checkout</Button>
             <div>
                 <div className='card-container'>
