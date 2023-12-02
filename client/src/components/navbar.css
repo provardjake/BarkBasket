@@ -45,7 +45,7 @@ body {
   font-size: 1rem;
 }
 
-.nav a:hover {
+nav a:hover {
   background-color: #2e5bb7;
   color: #fff;
 }

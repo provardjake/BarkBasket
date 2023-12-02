@@ -4,15 +4,15 @@ import {Link} from "react-router-dom";
 import Auth from "../utils/auth";
 
 const AppNavbar = () => {
-  const [showDropdown, setShowDropdown] = useState(false);
+  // const [showDropdown, setShowDropdown] = useState(false);
 
-  const handleMouseEnter = () => {
-    setShowDropdown(true);
-  };
+  // const handleMouseEnter = () => {
+  //   setShowDropdown(true);
+  // };
 
-  const handleMouseLeave = () => {
-    setShowDropdown(false);
-  };
+  // const handleMouseLeave = () => {
+  //   setShowDropdown(false);
+  // };
 
   const logout = (event) =>{
     event.preventDefault();
@@ -21,21 +21,25 @@ const AppNavbar = () => {
 
   return (
     <header className="nav">
-      <h1>Bark Basket</h1>
+      <Link to="/"><h1>Bark Basket</h1></Link>
       <nav>
         <ul>
-          <li
+          {/* <li
             className="dropdown"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
             <a href="/">Shop</a>
+
             {showDropdown && (
               <ul className="dropdown-menu">
                 <li><Link to="/cart">Cart</Link></li>
               </ul>
             )}
-          </li>
+          </li> */}
+          <li><Link to="">Shop</Link></li>
+          <li><Link to="/cart">Cart</Link></li>
+          <li><Link to="/contact-us">Contact</Link></li>
           {Auth.loggedIn() ? (
             <li className="user-info">
             <span className="username">Hello, {Auth.getProfile().data.username}</span>
@@ -47,8 +51,6 @@ const AppNavbar = () => {
             <li><Link to="/login">Login</Link></li>
             </>
           )}
-          
-          <li><Link to="/contact-us">Contact</Link></li>
         </ul>
       </nav>
     </header>
