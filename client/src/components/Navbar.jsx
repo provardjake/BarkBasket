@@ -14,6 +14,7 @@ const AppNavbar = () => {
   //   setShowDropdown(false);
   // };
 
+  // logs the current user out
   const logout = (event) =>{
     event.preventDefault();
     Auth.logout();
@@ -24,6 +25,7 @@ const AppNavbar = () => {
       <Link to="/"><h1>Bark Basket</h1></Link>
       <nav>
         <ul>
+          {/* Below is the code used for drop down menu. May use in the future */}
           {/* <li
             className="dropdown"
             onMouseEnter={handleMouseEnter}

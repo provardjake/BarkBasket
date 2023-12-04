@@ -28,6 +28,7 @@ const Login = (props) => {
     });
   };
 
+  // logins in an existing user
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {

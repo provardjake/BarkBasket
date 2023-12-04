@@ -52,14 +52,17 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
+// checks for correct password
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
+// gets the amount of items in a users cart
 userSchema.virtual("cartCount").get(function (){
     return this.cart.length;
 })
 
+//gets the total from a users cart
 userSchema.virtual("cartTotal").get(function (){
     let total = 0;
     for (let i = 0; i < this.cart.length; i++){

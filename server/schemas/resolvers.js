@@ -4,26 +4,31 @@ const {signToken, AuthenticationError} = require("../utils/auth")
 
 const resolvers = {
     Query: {
+        //query the current logged in user
         me: async (parent, args, context) => {
             if(context.user){
                 return User.findOne({_id: context.user._id});
             }
             throw AuthenticationError;
         },
+        //query all products
         products: async () =>{
             return Product.find();
         },
+        //query one product by id
         product: async (parent, {productId}) =>{
             return Product.findOne({_id: productId});
         }
     },
 
     Mutation: {
+        //mutation to add a new user when they log in
         addUser: async (parent, {username, email, password}) =>{
             const user = await User.create({username, email, password});
             const token = signToken(user);
             return {token, user};
         },
+        // mutation to log in an existing user
         login: async (parent, {email, password}) =>{
             const user = await User.findOne({email});
 
@@ -41,6 +46,7 @@ const resolvers = {
 
             return {token, user};
         },
+        // mutation to add a product to the user's cart
         addToCart: async (parent, {productData}, context) =>{
             if(context.user){
                 const updatedUser = User.findOneAndUpdate(
@@ -54,6 +60,7 @@ const resolvers = {
             }
             throw AuthenticationError;
         },
+        // mutation to remove a product from the cart
         removeFromCart: async (parent, {productId}, context) =>{
             if(context.user){
                 const updatedUser = await User.findOneAndUpdate(
@@ -65,6 +72,7 @@ const resolvers = {
             }
             throw AuthenticationError;
         },
+        // mutation to checkout the users cart
         checkout: async(parent, {userId}, context) =>{
             if(context.user){
                 return User.findOneAndUpdate(
