@@ -13,8 +13,11 @@ BarkBasket is an online e-commerce site directed towards pet owners being an onl
 - Users will then be able to add desired items to their cart which will then result is having the user either sign up or login.
 -After signing in you will be presented with a checkout screen that will thank you for shopping with BarkBasket! 
 
-# Technologies Used
+# Screenshot of deployed application
+![Alt text](image-1.png)
+# URL of deployed application
 
+https://barkbasket-production.up.railway.app/
 
 # Contributors
 Jacob Provard: 

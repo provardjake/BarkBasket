@@ -35,15 +35,15 @@ const Login = (props) => {
         variables: { ...formData },
       });
 
+      setFormData({
+        email: "",
+        password: "",
+      });
+      
       Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
     }
-
-    setFormData({
-      email: "",
-      password: "",
-    });
   };
 
   return (
