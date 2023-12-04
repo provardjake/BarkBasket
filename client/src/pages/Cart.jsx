@@ -23,7 +23,6 @@ const Cart = () =>{
 
     //gets the total price of the users cart and updates it when an item is removed
     const updateCartTotal = () =>{
-        console.log(userData);
         if(!Auth.loggedIn()){
             return
         }
@@ -32,7 +31,6 @@ const Cart = () =>{
             for(let i = 0; i < userData.cart.length; i++){
                 cartTotal = cartTotal + userData.cart[i].price;
             }
-            console.log(cartTotal);
             return cartTotal.toFixed(2);
         }
 
