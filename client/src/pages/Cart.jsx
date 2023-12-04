@@ -21,7 +21,11 @@ const Cart = () =>{
 
     const navigate = useNavigate();
 
+    //gets the total price of the users cart and updates it when an item is removed
     const updateCartTotal = () =>{
+        if(!Auth.loggedIn()){
+            return
+        }
         if(!loading){
             let cartTotal = 0;
             for(let i = 0; i < userData.cart.length; i++){
@@ -34,6 +38,7 @@ const Cart = () =>{
 
     updateCartTotal();
 
+    // deletes an item from the cart
     const handleDeleteFromCart = async (productId) =>{
         const token = Auth.loggedIn() ? Auth.getToken : null;
 
@@ -53,6 +58,7 @@ const Cart = () =>{
         }
     }
 
+    // checkouts the users current cart
     const handleCheckout = async () =>{
         const token = Auth.loggedIn() ? Auth.getToken: null;
 
@@ -71,6 +77,7 @@ const Cart = () =>{
         
     }
 
+    //checks if the user is logged in or not. Doesn't display a cart if they are not logged in
     if(!Auth.loggedIn()){
         return <h2>Please Log in to see your cart</h2>
     }

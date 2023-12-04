@@ -10,11 +10,13 @@ const ContactUs = () => {
 
   const [submitted, setSubmitted] = useState(false);
 
+  // updates form when input is changed
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  // updates form on submit
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);

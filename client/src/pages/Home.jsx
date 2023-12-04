@@ -15,6 +15,7 @@ const Home = () => {
 
   const [addToCart, { error }] = useMutation(ADD_TO_CART);
 
+  // adds an item to the cart
   const handleAddToCart = async (product) => {
     const token = Auth.loggedIn() ? Auth.getToken : null;
 
@@ -54,7 +55,6 @@ const Home = () => {
     <main className="main-container">
       <h2>Shop Products</h2>
       <div className="">
-        {/* Other content */}
         <div className="card-container">
           {loading ? (
             <div>Loading...</div>

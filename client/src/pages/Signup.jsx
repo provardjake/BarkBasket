@@ -24,6 +24,7 @@ const Signup = () => {
     });
   };
 
+  //creates a new user when they sign up
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
