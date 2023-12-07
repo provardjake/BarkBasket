@@ -41,9 +41,10 @@ export const ADD_TO_CART = gql`
   }`;
 
   export const REMOVE_FROM_CART = gql`
-    mutation removeFromCart($productId: String!) {
-    removeFromCart(productId: $productId) {
+    mutation removeFromCart($id: ID!) {
+    removeFromCart(_id: $id) {
       cart {
+        _id
         name
         productId
         price

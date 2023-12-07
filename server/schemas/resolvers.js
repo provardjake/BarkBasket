@@ -61,13 +61,14 @@ const resolvers = {
             throw AuthenticationError;
         },
         // mutation to remove a product from the cart
-        removeFromCart: async (parent, {productId}, context) =>{
+        removeFromCart: async (parent, {_id}, context) =>{
             if(context.user){
                 const updatedUser = await User.findOneAndUpdate(
                     {_id: context.user._id},
-                    {$pull: {cart: {productId}}},
+                    {$pull: {cart: {_id}}},
                     {new: true}
                 );
+                console.log(_id);
                 return updatedUser;
             }
             throw AuthenticationError;

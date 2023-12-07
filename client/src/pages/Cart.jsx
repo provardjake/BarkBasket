@@ -39,7 +39,7 @@ const Cart = () =>{
     updateCartTotal();
 
     // deletes an item from the cart
-    const handleDeleteFromCart = async (productId) =>{
+    const handleDeleteFromCart = async (id) =>{
         const token = Auth.loggedIn() ? Auth.getToken : null;
 
         if(!token){
@@ -48,7 +48,7 @@ const Cart = () =>{
 
         try{
             const {data} = await removeFromCart({
-                variables: {productId: productId}
+                variables: {id}
             });
 
             window.location.reload();
@@ -94,12 +94,12 @@ const Cart = () =>{
                     ): (
                         userData &&
                         userData.cart.map((product) =>(
-                        <Card className="product-card" key= {product.productId}>
+                        <Card className="product-card" key= {product._id}>
                             <Card.Img variant="top" src={product.image} />
                             <Card.Body>
                                 <Card.Title>{product.name}</Card.Title>
                                 <Card.Text>{product.price}</Card.Text>
-                                <Button variant="warning" onClick={() =>handleDeleteFromCart(product.productId)}>Remove From Cart</Button>
+                                <Button variant="warning" onClick={() =>handleDeleteFromCart(product._id)}>Remove From Cart</Button>
                             </Card.Body>
                         </Card>
                         ))

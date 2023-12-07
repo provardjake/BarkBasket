@@ -18,6 +18,7 @@ const typeDefs = `
     }
 
     type Cart{
+        _id: ID
         productId: String
         name: String
         price: Float
@@ -47,7 +48,7 @@ const typeDefs = `
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String): Auth
         addToCart(productData: ProductData!): User
-        removeFromCart(productId: String!): User
+        removeFromCart(_id: ID!): User
         checkout(userId: ID): User
     }
 `;
